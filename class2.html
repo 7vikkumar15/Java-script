@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+
+    <button onclick="myjs(67)">Execute JS function</button>
+
+    <h2>A function can access variables defined inside the function</h2>
+
+    <button type="button" onclick="myname ()"> Click me !!!</button>
+    <p id="demo"></p>
+
+    <p id="demo1"></p>
+
+ <p id="demo2"></p>
+ 
+<h1>Codingal Education</h1>
+<h3>function declaration</h3>
+
+    <script>
+
+        function myjs(x, y) {
+            if (y === undefined) {
+                y = 2
+            }
+            document.write(x * y)
+        }
+
+        //Activity 2
+
+        var b = 5;
+        function myname() {
+            var a = 4;
+            document.getElementById("demo").innerHTML = b * a;
+
+            document.getElementById("demo2").innerHTML = a;
+            document.getElementById("demo1").innerHTML = b;
+
+        }
+
+//Activity 3
+var result= function (a,b) {
+    return a*b
+}
+document.write(result(5,3459090));
+    </script>
+
+</body>
+
+</html>
