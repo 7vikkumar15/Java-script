@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+</head>
+
+<body>
+    <h2>Java script Strings Method</h2>
+    <p>Basic methods</p>
+
+    <h2>JS For loop</h2>
+    <p id="demo"></p>
+
+    <p id="demo1"> </p>
+    <script>
+        /*
+                var str = "AmAzInG"
+        
+                document.write(str.toUpperCase());
+                document.write("<br>");
+                document.write(str.toLowerCase());
+                document.write("<br>");
+                document.write(str.startsWith('x'));
+                document.write("<br>");
+        
+        
+        
+                //    var str1 = "I learnt about Methods";
+                //    var patt = new RegExp("about");
+                //     var res = patt.test(str);
+                //    document.write(res);
+        */
+        //Activity 2
+
+        var fruits = ["Apple", "Mango", "Watermelon", "Banana", "Grapes", "Melon"];
+        var text = "";
+        var i;
+        for (i = 0; i < fruits.length; i++) {
+            text += fruits[i] + "<br>";
+        }
+        document.getElementById("demo").innerHTML = text;
+
+        var day ;
+        switch (new Date().getDay()) {
+            case 0:
+                day = "Sunday";
+                break;
+            case 1:
+                day = "Monday";
+                break;
+            case 2:
+                day = "Tuesday";
+                break;
+            case 3:
+                day = "Wednesday";
+                break;
+            case 4:
+                day = "Thursday";
+                break;
+            case 5:
+                day = "Friday";
+                break;
+            case 6:
+                day = "Saturday";
+        }
+        document.getElementById("demo1").innerHTML = "Today is " + day;
+
+
+    </script>
+</body>
+
+</html>
