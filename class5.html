@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+</head>
+<body>
+
+
+
+<h2>JavaScripts Arrays</h2>
+<p id="demo"></p>
+
+<h2>JavaScripts Array Methods</h2>
+<h2>join() and pop()</h2>
+
+<p>The join() method joins array elements into a string and the pop() method removes the last element from an array</p>
+<p id="myjoin"></p>
+<p id="mypop1"></p>
+<p id="mypop2"></p>
+
+<h2>JavaScript Functions</h2>
+<p>Do a calculation and then display the result</p>
+<p id="demo1"></p>
+
+<script>
+
+var cars = [
+    "Coding",
+    "Magic" ,
+    "Learn"
+];
+document.getElementById("demo").innerHTML = cars[2];
+
+var fruits = ["Banana","Orange" ," Apple" , "Mango" ];
+
+document.getElementById("myjoin").innerHTML = fruits.join("*")
+
+document.getElementById("mypop1").innerHTML = fruits;fruits.pop();
+
+document.getElementById("mypop2").innerHTML = fruits;
+
+
+//Activity3
+
+function add (a,b){
+    return a+b;
+}
+
+function average (a,b){
+    return (a,b) / 2 ;
+}
+
+let result = average (10,20);
+
+document.getElementById("demo1").innerHTML = result;
+
+</script>
+</body>
+</html>
