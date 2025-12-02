@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+
+
+    <h1 id="one">Welcome</h1>
+    <p>This is a welcome message</p>
+    <h2>Techonlogy</h2>
+    <p>This is the techonlogy section</p>
+
+    <p>Adding JS as seprate file</p>
+    <button type="button" onclick="myFunction()">Click me!!</button>
+
+    <p id="kai"></p>
+
+<!--Activity 3-->
+
+<form id = "loginForm" onsubmit="validate(event)">
+    <fieldset>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+        </div>
+
+    <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" minlength="8">
+        </div>
+    <div>
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" min="12" max="50">
+    </div>
+<button type="submit">Login</button>
+
+</fieldset>
+</form>
+
+<div id="message"></div>
+
+    <script src="script.js">
+        var text = document.getElementById("one").innerHTML;
+        alert("The first heading is " + text)
+
+
+
+    </script>
+</body>
+
+</html>
