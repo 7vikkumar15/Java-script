@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+<body>
+
+<h2>Convert a JavaScript object into JSONS string , and send it to the server</h2>
+<p id="result"></p>
+
+<h3>JavaScript async / await</h3>
+<h1 id="A/A"></h1>
+
+<h4>JavaScript Promise</h4>
+<p id="demo"></p>
+
+<h2>JavaScript Callbacks</h2>
+<p>Do a calculation and then display the result .</p>
+<p id="result"></p>
+
+<script>
+
+var myObj = {name:"Saatvik" , age:12 , grade:7}
+var myJSON = JSON.stringify(myObj);
+var newObj = JSON.parse (myJSON);
+document.getElementById("A/A").innerHTML = newObj.name;
+
+
+//Activity 2
+
+async function add(a,b){
+    let response = await a+b;
+    display(response);
+}
+function display(some){
+    document.getElementById("A/A").innerHTML = some ;
+}
+add(5,20);
+
+//Activity 3
+
+function myDisplayer(some){
+    document.getElementById("demo").innerHTML = some;
+}
+
+function sum(a,b){
+    var sum =a+b;
+    myDisplayer(sum);
+}
+
+let myPromise = new Promise (function(myResolve, myReject)
+{
+    let x =0;
+
+    if(x==0){
+    myResolve ("OK");
+} else {
+    myReject("Error")
+}
+});
+
+myPromise.then(
+    function(value) {sum(5,5);},
+     function(error) {sum(error);}
+);
+    
+
+//Activity 4
+
+
+function myDisplayer(value) {
+document.getElementById("result").innerHTML = value;
+}
+function myCalculator(num1, num2, myCallback) {
+let sum = num1 + num2;
+myCallback(sum);
+}
+myCalculator(5, 5, myDisplayer);
+
+
+
+
+</script>
+</body>
+</html>
