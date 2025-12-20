@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+
+var choice = prompt ("Welcome to Perimeter calculator . \n Please enter your choice . \n1 Perimeter of rectangle. \n2 . Perimeter of circle (Circumference) . \n3 . Perimeter of parrellelogram  . \n4 . Perimeter of Triangle  . \n5 . Perimeter of Square"   );
+
+if (choice =='1' ) {
+    var l = prompt('Enter the length')
+    var b = prompt('Enter the Breadth')
+    var result =  2 * Number(l) + Number(b)
+    alert ('The Area is ' + result)
+}
+
+
+if (choice =='2' ) {
+    var r = prompt('Enter the radius')
+    var result =  2 * 3.14 * Number(r) 
+    alert ('The Area is ' + result)
+}
+
+
+
+
+if (choice =='4' ) {
+    var h = prompt('Enter the height')
+    var b = prompt('Enter the Base')
+    var result = Number(h) * Number(b) 
+    alert ('The Area is ' + result)
+}
+
+
+
+if (choice =='3' ) {
+    var h = prompt('Enter the height')
+    var cb = prompt('Enter the Corresponding Base')
+    var result = 2 * Number(h) * Number(cb) 
+    alert ('The Area is ' + result)
+}
+
+if (choice == '5') {
+    var s1 = prompt ('Enter Side')
+    var result = 4 * Number(s1)
+     alert ('The Area is ' + result)
+}
+
+
+
+
+
+        </script>
+    </body>
+</html>
