@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Random Number App</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0b0c0f;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.app {
+  text-align: center;
+  background: #15161c;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+}
+
+#number {
+  font-size: 80px;
+  margin: 20px 0;
+  color: #00ffff;
+}
+
+button {
+  padding: 12px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #00ffff;
+  color: #000;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #00cccc;
+}
+
+#status {
+  margin-top: 15px;
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="app">
+    <h1>Random Number</h1>
+    <div id="number">0</div>
+    <button id="btn">CLICK</button>
+    <p id="status">Stopped</p>
+  </div>
+
+  <script src="script.js">
+let clickCount = 0;
+let interval = null;
+
+const numberEl = document.getElementById("number");
+const button = document.getElementById("btn");
+const statusEl = document.getElementById("status");
+
+button.addEventListener("click", () => {
+  clickCount++;
+
+  
+  if (clickCount % 2 !== 0) {
+    clearInterval(interval);
+    interval = null;
+    statusEl.textContent = "Stopped";
+  }
+
+ 
+  else {
+    statusEl.textContent = "Running...";
+    interval = setInterval(() => {
+      numberEl.textContent = Math.floor(Math.random() * 6) + 1;
+     
+    }, 150);
+  }
+});
+
+  </script>
+</body>
+</html>
